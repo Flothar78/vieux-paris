@@ -32,19 +32,23 @@ onMounted(() => {
 });
 </script>
 
-<style>
+<style scoped>
 .container {
   box-sizing: border-box;
   border: 2px solid red;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50vw;
-  height: 100vh;
-}
-#map {
   width: 50vw;
   height: 50vh;
+}
+#map {
+  border: black 4px solid;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /* box-shadow: 2px 2px 4px blue; */
+}
+p {
+  width: 30vw;
+  text-align: center;
+  margin: 10px 0;
 }
 </style>

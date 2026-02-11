@@ -5,17 +5,17 @@ import PhotoInstance from "./components/PhotoInstance.vue";
 
 <template>
   <div class="full-page">
- 
-      <PhotoInstance />
-      <MapInstance />
-
+    <MapInstance />
+    <PhotoInstance />
   </div>
 </template>
 
 <style scoped>
 .full-page {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  height: 100vh;
 }
 </style>
