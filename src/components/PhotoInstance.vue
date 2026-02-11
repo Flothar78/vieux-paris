@@ -1,17 +1,16 @@
 <template>
   <div class="container">
-    
-      <img
-        class="displayed-photo"
-        v-if="selectedImage"
-        :src="selectedImage"
-        :alt="selectedTitle"
-      />
-      <img
-        class="displayed-photo"
-        v-else
-        src="../assets/12-rue-saint-mathieu-cafe-1904.jpg"
-      />
+    <img
+      class="displayed-photo"
+      v-if="selectedImage"
+      :src="selectedImage"
+      :alt="selectedTitle"
+    />
+    <img
+      class="displayed-photo"
+      v-else
+      src="../assets/12-rue-saint-mathieu-cafe-1904.jpg"
+    />
     <div class="search-section">
       <label for="location">
         Lieu (ville, quartier):
@@ -231,7 +230,6 @@ const selectImage = (item) => {
 <style scoped>
 .container {
   box-sizing: border-box;
-  /* border: 2px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -256,7 +254,6 @@ const selectImage = (item) => {
   position: absolute;
   bottom: 0;
   left: 0;
-  /* transform: translateX(-50%); */
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -324,6 +321,8 @@ button:active {
 }
 
 .error {
+  position: absolute;
+  bottom: 0;
   padding: 15px;
   background-color: #ffebee;
   color: #c62828;
@@ -333,13 +332,20 @@ button:active {
 }
 
 .no-results {
+  /* border: blue 2px solid; */
+  position: absolute;
+  bottom:10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   text-align: center;
-  color: #666;
-  width: 100%;
+  color: #777;
+  width: 50%;
 }
 
 .suggestions {
+  width: 100%;
   margin-top: 20px;
   padding: 15px;
   background-color: #e3f2fd;
@@ -359,10 +365,9 @@ button:active {
 .results-container {
   position: fixed;
   top: 50vh;
-  right: 10px;
-  width: 45%;
-  height: calc(50vh - 20px); /* ← Hauteur fixe */
-  overflow-y: auto; /* ← SCROLL ICI SEULEMENT */
+  width: 50%;
+  height: calc(50vh - 20px);
+  overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
   background-color: white;
